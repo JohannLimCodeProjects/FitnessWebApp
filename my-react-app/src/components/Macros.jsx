@@ -4,14 +4,6 @@ import TableHeader from "./TableHeader";
 
 const Macros = () => {
 
-  // var macroRow = document.getElementById("macroInput")
-  // var protein = macroRow.getAttribute("id")
-
-  var Total = (5 * 4) + (5 * 9) + (5 * 4)
-
-
-
-
   return (
     <div>
       <table>
