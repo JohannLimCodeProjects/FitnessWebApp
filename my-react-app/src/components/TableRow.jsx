@@ -20,7 +20,7 @@ function TableRow(props) {
   };
 
   return (
-    <table id={props.id}>
+    <table id = {props.id}>
       <tbody>
         <tr>
           <td>{total}</td>

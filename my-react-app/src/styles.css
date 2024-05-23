@@ -22,20 +22,47 @@ footer {
 }
 
 table {
-  margin: auto;
-  border-width: 1px;
-  border-style: solid;
   table-layout: fixed;
-  width: 100%;
+  width: 80%;
+  margin: auto;
 }
 
 td{
-  padding: 10px 10px 10px 10px;
+  direction: ltr;
   border-width: 1px;
-  width: auto;
+  width: 100%;
   border-style: solid;
 }
 
 thead{
   padding-top: 120px;
+}
+
+form {
+  width: 80%;
+  margin: auto;
+}
+
+.ingredientForm{
+  margin-left: 20%;
+  display: inline-block;
+  width: 60%;
+}
+
+.introText{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.appAbout{
+  text-align: left;
+  width: 70%;
+  margin: auto;
+}
+
+.appHeader{
+  text-align: center;
+  width: 50%;
+  margin: auto;
 }

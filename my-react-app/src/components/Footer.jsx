@@ -4,7 +4,8 @@ function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer>
-      <p>Copyright ⓒ {currentYear}</p>
+      <p>Built and designed by Johann Lim</p>
+      <p>All rights reserved. ©</p>
     </footer>
   );
 }
