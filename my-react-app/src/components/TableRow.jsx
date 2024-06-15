@@ -19,7 +19,7 @@ function TableRow(props) {
     setter(e.target.innerText);
   };
 
-  return (
+  const macrosRow = (
     <table id = {props.id}>
       <tbody>
         <tr>
@@ -31,6 +31,27 @@ function TableRow(props) {
       </tbody>
     </table>
   );
+
+  const calculatedRow = (
+    <table id = {props.id}>
+      <tbody>
+        <tr>
+          <td>{props.itemName}</td>
+          <td>{props.amount}</td>
+          <td>{Math.round(total * 100)/100}</td>
+          <td contentEditable="true" onInput={handleValChange(setVal2)}>{val2}</td>
+          <td contentEditable="true" onInput={handleValChange(setVal3)}>{val3}</td>
+          <td contentEditable="true" onInput={handleValChange(setVal4)}>{val4}</td>
+        </tr>
+      </tbody>
+    </table>
+  );
+
+  if (props.type === "1"){
+    return macrosRow;
+  } else {
+    return calculatedRow;
+  }
 }
 
 export default TableRow;

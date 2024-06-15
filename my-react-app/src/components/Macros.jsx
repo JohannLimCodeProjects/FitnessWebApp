@@ -24,8 +24,8 @@ const Macros = () => {
       </div>
       <table>
         <thead>
-          <TableHeader id = "macroHeader" val1="Macros" val2="Protein" val3="Fat" val4="Carbs"></TableHeader>
-          <TableRow id = "macroInput" val2 ="0" val3="0" val4="0"></TableRow>
+          <TableHeader id = "macroHeader" val1="Macros" val2="Protein" val3="Fat" val4="Carbs" type="1"></TableHeader>
+          <TableRow id = "macroInput" val2 ="0" val3="0" val4="0" type="1"></TableRow>
         </thead>
       </table>
     </div>

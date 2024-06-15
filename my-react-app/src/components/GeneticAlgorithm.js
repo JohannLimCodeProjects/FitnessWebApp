@@ -1,11 +1,15 @@
 const POPULATION_SIZE = 100;
 
+// Target in terms of Protein, Carbs, Fats
+const TARGET = (225,225,50);
 
-// Add all the ingredients to the dynamic ingredients list array
-// When generating a new gnome, use each macro in the ingredientslist and add or subtract from the current ingredient total to alter the values
+// Calculates length of the ingredient list
+const NUM_INGREDIENTS = len(queryResults);
 
-let ingedientList = [] 
+// Calculates the average amount of grams
+const AVERAGEAMOUNT = (225 + 225 + 50)/NUM_INGREDIENTS;
 
+// The following query results contian the macros per 100g of each ingredient
 const queryResults = [
     {
         "name": "beef",
@@ -51,16 +55,29 @@ const queryResults = [
     }
 ]
 
-class Ingredient(ingredientName,protein,carbs,fat){
-    this.ingredientName;
-    this.protein;
-    this.carbs;
-    this.fat;
+// Generates a randomNumber in a given range
+function RandomNum(start, end) { 
+    return Math.floor(Math.random() * (end - start + 1)) + start; 
+} 
+
+// Returns a value which is within the range of the max for the macro and the average.
+function MutatedGenes(){
+    let range = 225 - AVERAGEAMOUNT;
+    let r = randomNum(0, range - 1);
+    return r;
 }
 
-class insertIngredients(queryResults){
+// Create a chromosome which contains a set of genes (ingredients)
+function CreateGnome(){
+    let dynamicArray = []
 
+    for (let i = 0; i < NUM_INGREDIENTS; i++){
+        dynamicArray.push(MutatedGenes());
+    } 
+
+    return dynamicArray;
 }
+
 
 
 function Main(target_protein, target_fats, target_carbohydrates){

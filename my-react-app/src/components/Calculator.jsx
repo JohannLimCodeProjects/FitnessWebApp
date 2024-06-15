@@ -5,8 +5,10 @@ import TableHeader from "./TableHeader";
 function Calculator({calculate,ingredientData,databaseQuery}) {
 
   function createTableRow(queryItem){
+
+    
     return (
-      < TableRow id={queryItem.name} val2 = {queryItem.protein_g} val3={queryItem.fat_total_g} val4 = {queryItem.carbohydrates_total_g}/>
+      < TableRow itemName={queryItem.name} amount ={queryItem.serving_size_g} val2 = {queryItem.protein_g} val3={queryItem.fat_total_g} val4 = {queryItem.carbohydrates_total_g} type="0"/>
     )
   }
 
@@ -14,7 +16,7 @@ function Calculator({calculate,ingredientData,databaseQuery}) {
       <div style={{paddingTop: '20px'}}>
         <table>
           <thead>
-            <TableHeader val1="Calories" val2="Protein (g)" val3 = "Fat (g)" val4 = "Carbs (g)"/>
+            <TableHeader id = "calculatorHeader" val1="Macros" val2="Protein" val3="Fat" val4="Carbs" type="0"></TableHeader>
           </thead>
           <tbody>
             {databaseQuery.map(createTableRow)}

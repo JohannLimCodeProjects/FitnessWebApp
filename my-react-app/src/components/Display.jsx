@@ -13,10 +13,10 @@ function Display() {
   const [queryResult, setQueryResult] = useState([]);
 
   const tempData = [
-    { id: 1, val2: 16, val3: 0.3, val4: 4 },
-    { id: 2, val2: 16, val3: 0.3, val4: 3 },
-    { id: 3, val2: 2, val3: 0.3, val4: 20 },
-    { id: 4, val2: 0, val3: 0.3, val4: 2 }
+    { id: 1,itemName: "chicken", amount: 100, val2: 16, val3: 0.3, val4: 4 },
+    { id: 2,itemName: "beef",amount: 100,val2: 16, val3: 0.3, val4: 3 },
+    { id: 3,itemName: "broccoli", amount: 100,val2: 2, val3: 0.3, val4: 20 },
+    { id: 4,itemName: "rice", amount: 100,val2: 0, val3: 0.3, val4: 2 }
   ];
 
   async function APIQuery(query) {

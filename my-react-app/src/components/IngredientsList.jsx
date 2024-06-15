@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import TableRow from "./TableRow";
-import TableHeader from "./TableHeader";
 import "../styles.css"
 
 const IngredientsList = ({count,onClick}) => {
